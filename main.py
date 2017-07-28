@@ -1,9 +1,22 @@
 from game import game
+from intro import intro_loading
+from menu import menu
+
 
 if __name__ == "__main__":
 	debug = False
+	Intro = intro_loading()
+	Intro.run()
+	Menu = menu()
+	Menu.run()
+	ismousedown = Menu.run()
+	Menu.close()
 	Game = game(debug)
-	Game.run()
+	while True:
+		if(ismousedown == True):
+			Game.run()
+			break
+
 
 
 

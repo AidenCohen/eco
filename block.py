@@ -1,16 +1,16 @@
 """
 Use sprites to collect blocks.
- 
+
 Sample Python/Pygame Programs
 Simpson College Computer Science
 http://programarcadegames.com/
 http://simpson.edu/computer-science/
- 
+
 Explanation video: http://youtu.be/4W2AqUetBi4
 """
 import pygame
 
- 
+
 
 class Block(pygame.sprite.Sprite):
     """
@@ -25,15 +25,15 @@ class Block(pygame.sprite.Sprite):
         self.gravity=False
         """ Constructor. Pass in the color of the block,
         and its x and y position. """
- 
+
         # Call the parent class (Sprite) constructor
         super(Block,self).__init__()
- 
+
         # Create an image of the block, and fill it with a color.
         # This could also be an image loaded from the disk.
         self.image = pygame.Surface([width, height])
         self.image.fill(color)
- 
+
         # Fetch the rectangle object that has the dimensions of the image
         # image.
         # Update the position of this object by setting the values
